@@ -1,6 +1,6 @@
 tensorflow
 numpy
-streamlit==0.73.1
+streamlit
 pandas
 Pillow
 anyio==3.6.1
