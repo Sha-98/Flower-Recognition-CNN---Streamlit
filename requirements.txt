@@ -1,4 +1,8 @@
 tensorflow
+numpy==1.19.4
+streamlit==0.73.1
+pandas==1.1.4
+Pillow==8.2.0
 anyio==3.6.1
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
