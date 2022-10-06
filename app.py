@@ -26,7 +26,7 @@ def import_and_predict(image_data, model):
   prediction = model.predict(img_reshape)
   return prediction
 
-image = Image.open(file)
+image = open(file)
 st.image(image, use_column_width=True)
 predictions = import_and_predict(image, model)
 class_names = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
