@@ -30,7 +30,7 @@ if file in None:
 else:
   image = Image.open(file)
   st.image(image, use_column_width=True)
-  predictions = import_and_predict(image , model)
+  prediction = import_and_predict(image, model)
   class_names = ['Daisy', 'Dandelion', 'Rose' , 'Sunflower', 'Tulip']
   string = "The Flower in the Image is most likely is : "+class_name[np.argmax(predictions)]
   st.success(string)
