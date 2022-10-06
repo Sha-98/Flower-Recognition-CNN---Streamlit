@@ -8,7 +8,7 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-          # Flower Classification
+          # Welcome to Flower Classification
           """)
 
 file = st.file_uploader("Please upload a Flower Image" , type=["jpg","png"])
@@ -18,12 +18,11 @@ from PIL import Image, ImageOps
 import numpy as np
 
 def import_and_predict(image_data, model):
-  size = (150,150)
+  size = (180,180)
   image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
   img = np.asarray(image)
   img_reshape = img[np.newaxis,...]
   prediction = model.predicting(img_reshape)
-
   return prediction
 
 if file in None:
