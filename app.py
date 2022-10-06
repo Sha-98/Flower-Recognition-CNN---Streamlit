@@ -1,4 +1,3 @@
-pip install --upgrade streamlit
 import streamlit as st
 import tensorflow as tf 
 from tensorflow import keras
