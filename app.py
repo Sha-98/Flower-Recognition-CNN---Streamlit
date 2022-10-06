@@ -29,9 +29,10 @@ def import_and_predict(image_data, model):
 if file is None:
   st.text("Please upload an image file")
 else:
-   image = open(file)
- st.image(image, use_column_width=True)
- predictions = import_and_predict(image, model)
- class_names = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
- string = "The Flower in the Image is most likely is : "+class_names[np.argmax(predictions)]
- st.success(string)
+  image = open(file)
+  st.image(image, use_column_width=True)
+  predictions = import_and_predict(image, model)
+  class_names = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
+  string = "The Flower in the Image is most likely is : "+class_names[np.argmax(predictions)]
+  st.success(string)
+  
