@@ -26,7 +26,7 @@ fastjsonschema==2.15.3
 Flask==2.1.2
 fonttools==4.37.1
 gunicorn==20.1.0
-h5py==3.7.0
+h5py
 heroku
 idna==3.3
 importlib-metadata==4.12.0
@@ -45,7 +45,7 @@ jupyter-server==1.19.1
 jupyterlab
 jupyterlab-pygments==0.2.2
 jupyterlab_server==2.15.2
-Keras==2.1.6
+Keras
 kiwisolver==1.4.4
 llvmlite==0.39.0
 MarkupSafe==2.1.1
