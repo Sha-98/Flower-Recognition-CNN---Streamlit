@@ -24,12 +24,11 @@ def import_and_predict(image_data, model):
   img = np.asarray(image)
   img_reshape = img[np.newaxis,...]
   prediction = model.predict(img_reshape)
-  
   return prediction
+
 image = Image.open(file)
 st.image(image, use_column_width=True)
 predictions = import_and_predict(image, model)
-class_name = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
-string = "The Flower in the Image is most likely is : "+class_name[np.argmax(predictions)]
+class_names = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
+string = "The Flower in the Image is most likely is : "+class_names[np.argmax(predictions)]
 st.success(string)
-
