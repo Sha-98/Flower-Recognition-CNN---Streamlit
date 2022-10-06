@@ -11,7 +11,7 @@ st.write("""
           # Welcome to Flower Classification
           """)
 
-file = st.file_uploader("Please upload a Flower Image" , type=["jpg","png"])
+file = st.file_uploader("Please upload a Flower Image" , type=["jpg", "png"])
 
 import cv2
 from PIL import Image, ImageOps
@@ -23,6 +23,7 @@ def import_and_predict(image_data, model):
   img = np.asarray(image)
   img_reshape = img[np.newaxis,...]
   prediction = model.predicting(img_reshape)
+  
   return prediction
 
 if file in None:
@@ -30,8 +31,8 @@ if file in None:
 else:
   image = Image.open(file)
   st.image(image, use_column_width=True)
-  prediction = import_and_predict(image, model)
-  class_names = ['Daisy', 'Dandelion', 'Rose' , 'Sunflower', 'Tulip']
+  predictions = import_and_predict(image, model)
+  class_names = ['daisy', 'dandelion', 'roses' , 'sunflowers', 'tulips']
   string = "The Flower in the Image is most likely is : "+class_name[np.argmax(predictions)]
   st.success(string)
 
